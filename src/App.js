@@ -19,8 +19,8 @@ export default function App() {
         {covid.map((prop) => {
           return (
             <div key={prop.name}>
-              <h2>{prop.date}</h2>
-              <h2>{prop.death}</h2>
+              <h2>Date: {prop.date}</h2>
+              <h2>Death: {prop.death}</h2>
               <h2>{prop.deathIncrease}</h2>
               <h2>{prop.hospitalized}</h2>
               <h2>{prop.hospitalizedCurrently}</h2>
@@ -29,6 +29,8 @@ export default function App() {
               <h2>{prop.inIcuCurrently}</h2>
               <h2>{prop.negative}</h2>
               <h2>{prop.negativeIncrease}</h2>
+              <h2>{prop.positive}</h2>
+              <h2>{prop.positiveIncrease}</h2>
               <h2>{prop.onVentilatorCurrently}</h2>
               <h2>{prop.onVentilatorCumulative}</h2>
               <h2>{prop.pending}</h2>
