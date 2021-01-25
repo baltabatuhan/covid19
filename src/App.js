@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Layout, Menu } from "antd";
 import axios from "axios";
-const { Header } = Layout;
+const { Header, Content } = Layout;
 export default function App() {
   const [covid, setCovid] = useState([]);
   var day = new Date().getDate();
@@ -20,25 +20,25 @@ export default function App() {
   //               </h2>
   {
     return (
-      <div className="covid-19">
-        {covid.map((prop) => {
-          return (
-            <div>
-              <div classname="header">
-                <Header className="header">
-                  <Menu theme="dark" mode="horizontal">
-                    <Menu.Item key="1">Algoritma Alıştırmaları</Menu.Item>
-                    <Menu.Item key="2">Videolu Dersler</Menu.Item>
-                    <Menu.Item key="3">Forum</Menu.Item>
-                    <Menu.Item key="4">Blog</Menu.Item>
-                    <Menu.Item key="5">Üye Girişi</Menu.Item>
-                  </Menu>
-                </Header>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <Layout className="height-100">
+        <Header className="header">
+          <h2>
+            Today: {month}/{day}/{year}
+          </h2>
+
+          <h2>Positive</h2>
+          <h2>trt2</h2>
+          <h2>trt2</h2>
+          <h2>trt2</h2>
+        </Header>
+        <Content
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        ></Content>
+      </Layout>
     );
   }
 }
